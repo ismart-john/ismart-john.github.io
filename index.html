@@ -126,7 +126,7 @@
       position: absolute;
       display: flex;
       top: 15px;
-      left: 50%;
+      left: 45%;
       background-color: rgba(255, 255, 255, 0.85);
       padding: 10px 15px;
       border: 1px solid #ccc;
@@ -153,7 +153,9 @@
     }
 
     #search-result {
-      margin-top: 8px;
+      position: absolute;
+      top: 80px;
+      left: 30%;
       color: #666;
     }
   </style>
@@ -176,7 +178,7 @@
   <div id="search-container">
     <input type="text" id="station-number-input" placeholder="정류소 번호로 검색">
     <button id="search-button">검색</button>
-    <div id="search-result"></div>
+    <div id="search-result">2222</div>
   </div>
 
   <div id="map"></div>
@@ -391,9 +393,16 @@
 
         // 검색 실행 함수
         function searchByStationNumber() {
-          const stationNumber = searchInput.value.trim();
-          if (stationNumber === '') {
-            searchResult.textContent = '기기번호를 입력하세요.';
+          const stationNumberStr = searchInput.value.trim();
+          if (stationNumberStr === '') {
+            searchResult.textContent = '정류소 번호를 입력하세요.';
+            return;
+          }
+
+          const stationNumber = Number(stationNumberStr);
+
+          if (isNaN(stationNumber)) {
+            searchResult.textContent = '유효한 정류소 번호를 입력하세요.';
             return;
           }
 
@@ -441,7 +450,7 @@
 
             searchResult.textContent = `${foundData.stationName} (${foundData.stationNumber}) 찾음`;
           } else {
-            searchResult.textContent = '해당 기기번호가 없습니다.';
+            searchResult.textContent = '해당하는 정류소가 없습니다.';
           }
         }
 
