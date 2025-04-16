@@ -105,7 +105,7 @@
       border-radius: 5px;
       z-index: 10;
       font-size: 16px;
-      /* 글자 크기 13px에서 16px로 확대 */
+      /* 글자 크기 확대 */
     }
 
     #marker-toggles label {
@@ -121,7 +121,7 @@
       margin-right: 5px;
     }
 
-    /* 검색 기능 스타일 */
+    /* 검색 기능 스타일 추가 */
     #search-container {
       position: absolute;
       display: flex;
@@ -135,7 +135,7 @@
       width: 250px;
     }
 
-    #search-input {
+    #station-number-input {
       width: 70%;
       padding: 8px;
       border: 1px solid #ccc;
@@ -152,25 +152,8 @@
       cursor: pointer;
     }
 
-    #search-results {
-      margin-top: 10px;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .result-item {
-      padding: 8px;
-      border-bottom: 1px solid #eee;
-      cursor: pointer;
-      background-color: white;
-    }
-
-    .result-item:hover {
-      background-color: #f0f0f0;
-    }
-
-    .no-results {
-      padding: 8px;
+    #search-result {
+      margin-top: 8px;
       color: #666;
     }
   </style>
@@ -189,11 +172,11 @@
     </label>
   </div>
 
-  <!-- 검색 기능 추가 -->
+  <!-- 검색 기능 UI 추가 -->
   <div id="search-container">
-    <input type="text" id="search-input" placeholder="번호 또는 이름으로 검색">
+    <input type="text" id="station-number-input" placeholder="기기번호 검색">
     <button id="search-button">검색</button>
-    <div id="search-results"></div>
+    <div id="search-result"></div>
   </div>
 
   <div id="map"></div>
@@ -306,7 +289,7 @@
 
       // pi 마커 생성 함수
       function createPiMarkers(positionsData, markerImage) {
-        if (!positionsData || positionsData.length === 0) return [];
+        if (!positionsData || positionsData.length === 0) return [];  // 빈 배열 반환하도록 수정
         const markers = [];
 
         for (let i = 0; i < positionsData.length; i++) {
@@ -333,7 +316,7 @@
 
       // cctv 마커 생성 함수
       function createCctvMarkers(positionsData, markerImage) {
-        if (!positionsData || positionsData.length === 0) return [];
+        if (!positionsData || positionsData.length === 0) return [];  // 빈 배열 반환하도록 수정
         const markers = [];
 
         for (let i = 0; i < positionsData.length; i++) {
@@ -400,123 +383,81 @@
       // 지도 클릭 시 오버레이 닫기
       kakao.maps.event.addListener(map, 'click', closeOverlay);
 
-      // 검색 기능 구현
-      function setupSearch() {
-        const searchInput = document.getElementById('search-input');
+      // stationNumber 검색 기능 구현
+      function setupStationNumberSearch() {
+        const searchInput = document.getElementById('station-number-input');
         const searchButton = document.getElementById('search-button');
-        const searchResults = document.getElementById('search-results');
+        const searchResult = document.getElementById('search-result');
 
         // 검색 실행 함수
-        function performSearch() {
-          const searchTerm = searchInput.value.toLowerCase().trim();
-          if (searchTerm === '') return;
-
-          searchResults.innerHTML = '';
-          let foundResults = [];
-
-          // Pi3 데이터 검색
-          if (pi3PositionsData) {
-            pi3PositionsData.forEach(station => {
-              if (station.stationNumber.toLowerCase().includes(searchTerm) ||
-                station.stationName.toLowerCase().includes(searchTerm)) {
-                foundResults.push({
-                  name: station.stationName,
-                  number: station.stationNumber,
-                  position: new kakao.maps.LatLng(station.lat, station.lng),
-                  type: 'pi3',
-                  data: station
-                });
-              }
-            });
+        function searchByStationNumber() {
+          const stationNumber = searchInput.value.trim();
+          if (stationNumber === '') {
+            searchResult.textContent = '기기번호를 입력하세요.';
+            return;
           }
 
-          // Pi4 데이터 검색
-          if (pi4PositionsData) {
-            pi4PositionsData.forEach(station => {
-              if (station.stationNumber.toLowerCase().includes(searchTerm) ||
-                station.stationName.toLowerCase().includes(searchTerm)) {
-                foundResults.push({
-                  name: station.stationName,
-                  number: station.stationNumber,
-                  position: new kakao.maps.LatLng(station.lat, station.lng),
-                  type: 'pi4',
-                  data: station
-                });
+          let found = false;
+          let foundData = null;
+          let foundPosition = null;
+          let foundMarker = null;
+          let type = null;
+
+          // Pi3 검색
+          if (!found && pi3PositionsData) {
+            for (let i = 0; i < pi3PositionsData.length; i++) {
+              if (pi3PositionsData[i].stationNumber === stationNumber) {
+                found = true;
+                foundData = pi3PositionsData[i];
+                foundPosition = new kakao.maps.LatLng(foundData.lat, foundData.lng);
+                foundMarker = pi3Markers[i];
+                type = 'pi3';
+                break;
               }
-            });
+            }
           }
 
-          // CCTV 데이터 검색
-          if (cctvPositionData && cctvPositionData.length > 0) {
-            cctvPositionData.forEach(cctv => {
-              if (cctv.cctvName.toLowerCase().includes(searchTerm)) {
-                foundResults.push({
-                  name: cctv.cctvName,
-                  number: '',
-                  position: new kakao.maps.LatLng(cctv.lat, cctv.lng),
-                  type: 'cctv',
-                  data: cctv
-                });
+          // Pi4 검색
+          if (!found && pi4PositionsData) {
+            for (let i = 0; i < pi4PositionsData.length; i++) {
+              if (pi4PositionsData[i].stationNumber === stationNumber) {
+                found = true;
+                foundData = pi4PositionsData[i];
+                foundPosition = new kakao.maps.LatLng(foundData.lat, foundData.lng);
+                foundMarker = pi4Markers[i];
+                type = 'pi4';
+                break;
               }
-            });
+            }
           }
 
-          // 검색 결과 표시
-          if (foundResults.length === 0) {
-            searchResults.innerHTML = '<div class="no-results">검색 결과가 없습니다.</div>';
+          if (found) {
+            // 해당 위치로 이동
+            map.setCenter(foundPosition);
+            map.setLevel(3);  // 줌 레벨 설정
+
+            // 마커 오버레이 표시
+            showPiOverlay(map, foundMarker, foundData);
+
+            searchResult.textContent = `${foundData.stationName} (${foundData.stationNumber}) 찾음`;
           } else {
-            foundResults.forEach(result => {
-              const resultItem = document.createElement('div');
-              resultItem.className = 'result-item';
-              resultItem.innerHTML = `${result.name}${result.number ? ' (' + result.number + ')' : ''}`;
-
-              resultItem.addEventListener('click', function () {
-                // 해당 위치로 지도 이동
-                map.setCenter(result.position);
-                map.setLevel(3);  // 줌 레벨 설정
-
-                // 마커 오버레이 표시
-                if (result.type === 'pi3' || result.type === 'pi4') {
-                  // Pi 마커 찾기
-                  const markers = result.type === 'pi3' ? pi3Markers : pi4Markers;
-                  for (let i = 0; i < markers.length; i++) {
-                    if (markers[i].getPosition().equals(result.position)) {
-                      showPiOverlay(map, markers[i], result.data);
-                      break;
-                    }
-                  }
-                } else if (result.type === 'cctv') {
-                  // CCTV 마커 찾기
-                  for (let i = 0; i < cctvMarkers.length; i++) {
-                    if (cctvMarkers[i].getPosition().equals(result.position)) {
-                      showCctvOverlay(map, cctvMarkers[i], result.data);
-                      break;
-                    }
-                  }
-                }
-
-                // 검색 결과 창 닫기
-                searchResults.innerHTML = '';
-              });
-
-              searchResults.appendChild(resultItem);
-            });
+            searchResult.textContent = '해당 기기번호가 없습니다.';
           }
         }
 
         // 버튼 클릭 이벤트
-        searchButton.addEventListener('click', performSearch);
+        searchButton.addEventListener('click', searchByStationNumber);
 
         // 엔터 키 이벤트
         searchInput.addEventListener('keypress', function (e) {
           if (e.key === 'Enter') {
-            performSearch();
+            searchByStationNumber();
           }
         });
       }
 
       // 검색 기능 초기화
-      setupSearch();
+      setupStationNumberSearch();
     });
   </script>
 </body>
