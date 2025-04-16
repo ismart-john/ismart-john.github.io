@@ -42,18 +42,6 @@
     "lng": 126.646866
   },
   {
-    "stationName": "더샵하버뷰14단지",
-    "stationNumber": 38504,
-    "lat": 37.396418,
-    "lng": 126.645956
-  },
-  {
-    "stationName": "송도2동주민센터",
-    "stationNumber": 38588,
-    "lat": 37.40376,
-    "lng": 126.64099
-  },
-  {
     "stationName": "반도유보라",
     "stationNumber": 42963,
     "lat": 37.52653,
@@ -136,12 +124,6 @@
     "stationNumber": 38713,
     "lat": 37.41034749,
     "lng": 126.6248216
-  },
-  {
-    "stationName": "달빛축제공원",
-    "stationNumber": 38621,
-    "lat": 37.40302036,
-    "lng": 126.6314028
   },
   {
     "stationName": "복합환승센터",

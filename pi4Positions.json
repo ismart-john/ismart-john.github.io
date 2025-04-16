@@ -180,12 +180,6 @@
     "lng": 126.6589897
   },
   {
-    "stationName": "더샵그린애비뉴",
-    "stationNumber": 38486,
-    "lat": 37.39886,
-    "lng": 126.64757
-  },
-  {
     "stationName": "글로벌캠퍼스푸르지오",
     "stationNumber": 39840,
     "lat": 37.37571412,
@@ -498,12 +492,6 @@
     "lng": 126.65792
   },
   {
-    "stationName": "인천대학교북문",
-    "stationNumber": 38750,
-    "lat": 37.378008,
-    "lng": 126.631113
-  },
-  {
     "stationName": "인천대학교송도캠퍼스",
     "stationNumber": 38749,
     "lat": 37.37381,
@@ -726,30 +714,6 @@
     "lng": 126.612444
   },
   {
-    "stationName": "랜드마크시티1호수변공원",
-    "stationNumber": 38767,
-    "lat": 37.407144,
-    "lng": 126.611533
-  },
-  {
-    "stationName": "힐스테이트레이크송도1차입구",
-    "stationNumber": 38751,
-    "lat": 37.401491,
-    "lng": 126.619652
-  },
-  {
-    "stationName": "인천포스코고등학교",
-    "stationNumber": 38758,
-    "lat": 37.400912,
-    "lng": 126.648372
-  },
-  {
-    "stationName": "인천포스코고등학교",
-    "stationNumber": 38759,
-    "lat": 37.400473,
-    "lng": 126.648538
-  },
-  {
     "stationName": "인천대학교북문",
     "stationNumber": 38760,
     "lat": 37.379077,
@@ -816,18 +780,6 @@
     "lng": 126.6600726
   },
   {
-    "stationName": "송도자이크리스탈오션",
-    "stationNumber": 38780,
-    "lat": 37.3885529,
-    "lng": 126.6129954
-  },
-  {
-    "stationName": "송도자이크리스탈오션",
-    "stationNumber": 38779,
-    "lat": 37.38917944,
-    "lng": 126.6130919
-  },
-  {
     "stationName": "송도랜드마크시티13호근린공원",
     "stationNumber": 38738,
     "lat": 37.38726559,
@@ -856,12 +808,6 @@
     "stationNumber": 38424,
     "lat": 37.38371246,
     "lng": 126.6434552
-  },
-  {
-    "stationName": "송도더샵마스터뷰23단지",
-    "stationNumber": 38441,
-    "lat": 37.38115618,
-    "lng": 126.6346699
   },
   {
     "stationName": "송도힐스테이트",
