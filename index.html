@@ -449,8 +449,6 @@
 
             // 마커 오버레이 표시
             showPiOverlay(map, foundMarker, foundData);
-
-            searchResult.textContent = `${foundData.stationName} (${foundData.stationNumber}) 찾음`;
           } else {
             searchResult.textContent = '해당하는 정류소가 없습니다.';
             setTimeout(() => {
