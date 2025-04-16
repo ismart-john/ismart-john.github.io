@@ -1,0 +1,866 @@
+[
+  {
+    "stationName": "한화꿈에그린",
+    "stationNumber": 42860,
+    "lat": 37.53823111,
+    "lng": 126.6408211
+  },
+  {
+    "stationName": "청라호반베르디움.포리공원",
+    "stationNumber": 42919,
+    "lat": 37.52722194,
+    "lng": 126.6406061
+  },
+  {
+    "stationName": "제일풍경채",
+    "stationNumber": 42833,
+    "lat": 37.53918389,
+    "lng": 126.6494889
+  },
+  {
+    "stationName": "린스트라우스",
+    "stationNumber": 42831,
+    "lat": 37.53509575,
+    "lng": 126.6500088
+  },
+  {
+    "stationName": "중흥S클래스1차",
+    "stationNumber": 42844,
+    "lat": 37.54044306,
+    "lng": 126.6518389
+  },
+  {
+    "stationName": "중흥S클래스",
+    "stationNumber": 42832,
+    "lat": 37.53911611,
+    "lng": 126.6501869
+  },
+  {
+    "stationName": "제일풍경채2차323동앞",
+    "stationNumber": 42891,
+    "lat": 37.53625922,
+    "lng": 126.645481
+  },
+  {
+    "stationName": "린스트라우스",
+    "stationNumber": 42948,
+    "lat": 37.52968161,
+    "lng": 126.6415491
+  },
+  {
+    "stationName": "웰카운티1차",
+    "stationNumber": 42746,
+    "lat": 37.53867962,
+    "lng": 126.6563377
+  },
+  {
+    "stationName": "호반베르디움214동앞",
+    "stationNumber": 42998,
+    "lat": 37.53634722,
+    "lng": 126.6587639
+  },
+  {
+    "stationName": "청라국제도서관",
+    "stationNumber": 42923,
+    "lat": 37.53122229,
+    "lng": 126.6600238
+  },
+  {
+    "stationName": "청라국제도서관",
+    "stationNumber": 42922,
+    "lat": 37.53121874,
+    "lng": 126.6596516
+  },
+  {
+    "stationName": "호반베르디움",
+    "stationNumber": 42855,
+    "lat": 37.53628139,
+    "lng": 126.6572122
+  },
+  {
+    "stationName": "웰카운티",
+    "stationNumber": 42772,
+    "lat": 37.53491249,
+    "lng": 126.6565902
+  },
+  {
+    "stationName": "서해그랑블",
+    "stationNumber": 42790,
+    "lat": 37.52973277,
+    "lng": 126.6551081
+  },
+  {
+    "stationName": "호반베르디움14단지",
+    "stationNumber": 42880,
+    "lat": 37.5362412,
+    "lng": 126.6517821
+  },
+  {
+    "stationName": "청라1동행정복지센터",
+    "stationNumber": 42745,
+    "lat": 37.53209127,
+    "lng": 126.6533926
+  },
+  {
+    "stationName": "청라1동행정복지센터",
+    "stationNumber": 42744,
+    "lat": 37.532071,
+    "lng": 126.65312
+  },
+  {
+    "stationName": "힐데스하임",
+    "stationNumber": 42876,
+    "lat": 37.52976194,
+    "lng": 126.6522723
+  },
+  {
+    "stationName": "제일풍경채2차321동앞",
+    "stationNumber": 42873,
+    "lat": 37.53779288,
+    "lng": 126.6446872
+  },
+  {
+    "stationName": "청라호수공원(남측)",
+    "stationNumber": 42861,
+    "lat": 37.52558472,
+    "lng": 126.6390783
+  },
+  {
+    "stationName": "반도유보라",
+    "stationNumber": 42905,
+    "lat": 37.524625,
+    "lng": 126.6273589
+  },
+  {
+    "stationName": "자이더테라스2단지",
+    "stationNumber": 42871,
+    "lat": 37.524005,
+    "lng": 126.6249589
+  },
+  {
+    "stationName": "청라국제업무단지(골드클래스)",
+    "stationNumber": 42984,
+    "lat": 37.5292292,
+    "lng": 126.6250299
+  },
+  {
+    "stationName": "송도풍림아이원1단지",
+    "stationNumber": 38033,
+    "lat": 37.39461656,
+    "lng": 126.6536726
+  },
+  {
+    "stationName": "신송고등학교",
+    "stationNumber": 38023,
+    "lat": 37.3911018,
+    "lng": 126.658823
+  },
+  {
+    "stationName": "이안송도",
+    "stationNumber": 38409,
+    "lat": 37.39676052,
+    "lng": 126.6515302
+  },
+  {
+    "stationName": "웰카운티",
+    "stationNumber": 38352,
+    "lat": 37.38009974,
+    "lng": 126.6473416
+  },
+  {
+    "stationName": "청라국제도시역",
+    "stationNumber": 89043,
+    "lat": 37.5547859,
+    "lng": 126.6251874
+  },
+  {
+    "stationName": "신송고등학교",
+    "stationNumber": 38024,
+    "lat": 37.39125683,
+    "lng": 126.6589897
+  },
+  {
+    "stationName": "더샵그린애비뉴",
+    "stationNumber": 38486,
+    "lat": 37.39886,
+    "lng": 126.64757
+  },
+  {
+    "stationName": "글로벌캠퍼스푸르지오",
+    "stationNumber": 39840,
+    "lat": 37.37571412,
+    "lng": 126.6551739
+  },
+  {
+    "stationName": "테크노파크역입구",
+    "stationNumber": 38422,
+    "lat": 37.38174863,
+    "lng": 126.6567896
+  },
+  {
+    "stationName": "인천대입구역",
+    "stationNumber": 38396,
+    "lat": 37.38506388,
+    "lng": 126.6389084
+  },
+  {
+    "stationName": "청라국제도시역(영종방향)",
+    "stationNumber": 89215,
+    "lat": 37.5549355,
+    "lng": 126.6259215
+  },
+  {
+    "stationName": "롯데캐슬",
+    "stationNumber": 39798,
+    "lat": 37.38535539,
+    "lng": 126.6678231
+  },
+  {
+    "stationName": "송도센트럴파크",
+    "stationNumber": 38452,
+    "lat": 37.392138,
+    "lng": 126.63488
+  },
+  {
+    "stationName": "재능대 송도캠퍼스",
+    "stationNumber": 38622,
+    "lat": 37.36989825,
+    "lng": 126.6616991
+  },
+  {
+    "stationName": "인천대학교 공과대학",
+    "stationNumber": 38499,
+    "lat": 37.37160618,
+    "lng": 126.6335107
+  },
+  {
+    "stationName": "미관광장",
+    "stationNumber": 38512,
+    "lat": 37.37154638,
+    "lng": 126.6463433
+  },
+  {
+    "stationName": "생산기술연구원",
+    "stationNumber": 38354,
+    "lat": 37.38331528,
+    "lng": 126.6495928
+  },
+  {
+    "stationName": "인천대입구,롯데몰",
+    "stationNumber": 38646,
+    "lat": 37.38402285,
+    "lng": 126.6403606
+  },
+  {
+    "stationName": "인천대입구,롯데몰",
+    "stationNumber": 38649,
+    "lat": 37.38505437,
+    "lng": 126.6407254
+  },
+  {
+    "stationName": "웰카운티 1단지",
+    "stationNumber": 38648,
+    "lat": 37.37552267,
+    "lng": 126.6501448
+  },
+  {
+    "stationName": "송도세브란스병원",
+    "stationNumber": 38651,
+    "lat": 37.38310531,
+    "lng": 126.6806388
+  },
+  {
+    "stationName": "서부산업단지",
+    "stationNumber": 89035,
+    "lat": 37.55429925,
+    "lng": 126.6345812
+  },
+  {
+    "stationName": "인천체육고등학교",
+    "stationNumber": 89049,
+    "lat": 37.54787126,
+    "lng": 126.6118231
+  },
+  {
+    "stationName": "인천체육고등학교 입구",
+    "stationNumber": 89048,
+    "lat": 37.54771815,
+    "lng": 126.6117158
+  },
+  {
+    "stationName": "청라백세요양병원",
+    "stationNumber": 89179,
+    "lat": 37.52866156,
+    "lng": 126.6123917
+  },
+  {
+    "stationName": "청라센텀로제비앙",
+    "stationNumber": 89296,
+    "lat": 37.5372589,
+    "lng": 126.621522
+  },
+  {
+    "stationName": "로봇타워",
+    "stationNumber": 89301,
+    "lat": 37.52070227,
+    "lng": 126.6121663
+  },
+  {
+    "stationName": "청라도",
+    "stationNumber": 89127,
+    "lat": 37.5343501,
+    "lng": 126.6137112
+  },
+  {
+    "stationName": "청라도",
+    "stationNumber": 42931,
+    "lat": 37.53398426,
+    "lng": 126.6143979
+  },
+  {
+    "stationName": "청라센텀로제비앙",
+    "stationNumber": 89295,
+    "lat": 37.53730013,
+    "lng": 126.6218651
+  },
+  {
+    "stationName": "뒤골입구",
+    "stationNumber": 35668,
+    "lat": 37.52528444,
+    "lng": 126.5137051
+  },
+  {
+    "stationName": "영종동 행정복지센터",
+    "stationNumber": 35672,
+    "lat": 37.49401221,
+    "lng": 126.5307535
+  },
+  {
+    "stationName": "예단포",
+    "stationNumber": 35319,
+    "lat": 37.52724079,
+    "lng": 126.5035829
+  },
+  {
+    "stationName": "운남초교사거리",
+    "stationNumber": 35707,
+    "lat": 37.49178796,
+    "lng": 126.5296644
+  },
+  {
+    "stationName": "운남초교사거리",
+    "stationNumber": 35706,
+    "lat": 37.49184622,
+    "lng": 126.5299038
+  },
+  {
+    "stationName": "뒤골입구",
+    "stationNumber": 35669,
+    "lat": 37.52515674,
+    "lng": 126.513787
+  },
+  {
+    "stationName": "박촌마을입구",
+    "stationNumber": 35671,
+    "lat": 37.52361662,
+    "lng": 126.5105898
+  },
+  {
+    "stationName": "박촌마을입구",
+    "stationNumber": 35670,
+    "lat": 37.52356131,
+    "lng": 126.5104047
+  },
+  {
+    "stationName": "영종동 행정복지센터",
+    "stationNumber": 35673,
+    "lat": 37.4940281,
+    "lng": 126.5310028
+  },
+  {
+    "stationName": "예단포",
+    "stationNumber": 35395,
+    "lat": 37.52723147,
+    "lng": 126.5038017
+  },
+  {
+    "stationName": "웰카운티2단지",
+    "stationNumber": 38709,
+    "lat": 37.379066,
+    "lng": 126.653484
+  },
+  {
+    "stationName": "송도글로벌캠퍼스푸르지오",
+    "stationNumber": 38711,
+    "lat": 37.37832,
+    "lng": 126.653599
+  },
+  {
+    "stationName": "송도더샵마스터뷰22단지(2202동)하행",
+    "stationNumber": 38712,
+    "lat": 37.383757,
+    "lng": 126.632713
+  },
+  {
+    "stationName": "송도더샵마스터뷰23단지(정문)",
+    "stationNumber": 38692,
+    "lat": 37.382269,
+    "lng": 126.632582
+  },
+  {
+    "stationName": "송도더샵마스터뷰22단지",
+    "stationNumber": 38693,
+    "lat": 37.381854,
+    "lng": 126.630987
+  },
+  {
+    "stationName": "송도더샵마스터뷰22단지(정문)",
+    "stationNumber": 38694,
+    "lat": 37.382265,
+    "lng": 126.632278
+  },
+  {
+    "stationName": "송도더샵마스터뷰22단지",
+    "stationNumber": 38695,
+    "lat": 37.382009,
+    "lng": 126.63113
+  },
+  {
+    "stationName": "송도더샵마스터뷰22단지(2202동)",
+    "stationNumber": 38698,
+    "lat": 37.384109,
+    "lng": 126.632764
+  },
+  {
+    "stationName": "송도체육센터",
+    "stationNumber": 38699,
+    "lat": 37.386703,
+    "lng": 126.669868
+  },
+  {
+    "stationName": "송도체육센터",
+    "stationNumber": 38700,
+    "lat": 37.38683,
+    "lng": 126.669956
+  },
+  {
+    "stationName": "송도누리공원",
+    "stationNumber": 38664,
+    "lat": 37.377587,
+    "lng": 126.656491
+  },
+  {
+    "stationName": "소리공원(하모니로)",
+    "stationNumber": 38721,
+    "lat": 37.381124,
+    "lng": 126.641173
+  },
+  {
+    "stationName": "소리공원(하모니로)",
+    "stationNumber": 38722,
+    "lat": 37.379985,
+    "lng": 126.64081
+  },
+  {
+    "stationName": "캠퍼스타운역(3번출구)",
+    "stationNumber": 38717,
+    "lat": 37.388248,
+    "lng": 126.661461
+  },
+  {
+    "stationName": "해돋이공원",
+    "stationNumber": 38718,
+    "lat": 37.389975,
+    "lng": 126.653221
+  },
+  {
+    "stationName": "송도컨벤시아남문",
+    "stationNumber": 38661,
+    "lat": 37.386819,
+    "lng": 126.644368
+  },
+  {
+    "stationName": "해돋이도서관",
+    "stationNumber": 38729,
+    "lat": 37.386985,
+    "lng": 126.658107
+  },
+  {
+    "stationName": "해돋이도서관",
+    "stationNumber": 38730,
+    "lat": 37.38674,
+    "lng": 126.65792
+  },
+  {
+    "stationName": "인천대학교북문",
+    "stationNumber": 38750,
+    "lat": 37.378008,
+    "lng": 126.631113
+  },
+  {
+    "stationName": "인천대학교송도캠퍼스",
+    "stationNumber": 38749,
+    "lat": 37.37381,
+    "lng": 126.631178
+  },
+  {
+    "stationName": "LH49단지행복주택아파트",
+    "stationNumber": 35768,
+    "lat": 37.49355707,
+    "lng": 126.5711717
+  },
+  {
+    "stationName": "LH49단지행복주택아파트",
+    "stationNumber": 35769,
+    "lat": 37.4937569,
+    "lng": 126.5707937
+  },
+  {
+    "stationName": "푸르지오더스카이",
+    "stationNumber": 35845,
+    "lat": 37.47794402,
+    "lng": 126.5053811
+  },
+  {
+    "stationName": "영종자이아파트",
+    "stationNumber": 38535,
+    "lat": 37.4893196,
+    "lng": 126.530647
+  },
+  {
+    "stationName": "영종자이아파트",
+    "stationNumber": 38536,
+    "lat": 37.48915815,
+    "lng": 126.5311561
+  },
+  {
+    "stationName": "하늘도시중심상가",
+    "stationNumber": 35821,
+    "lat": 37.48866422,
+    "lng": 126.5603484
+  },
+  {
+    "stationName": "하늘도시중심상가",
+    "stationNumber": 35822,
+    "lat": 37.48841022,
+    "lng": 126.5599144
+  },
+  {
+    "stationName": "운서SKVIEW스카이시티",
+    "stationNumber": 35780,
+    "lat": 37.48245653,
+    "lng": 126.502639
+  },
+  {
+    "stationName": "운서SKVIEW스카이시티",
+    "stationNumber": 35781,
+    "lat": 37.48231068,
+    "lng": 126.5031559
+  },
+  {
+    "stationName": "운남동우체국",
+    "stationNumber": 35848,
+    "lat": 37.47598445,
+    "lng": 126.5260451
+  },
+  {
+    "stationName": "햇내로공원입구",
+    "stationNumber": 35777,
+    "lat": 37.49670371,
+    "lng": 126.5013456
+  },
+  {
+    "stationName": "햇내로공원입구",
+    "stationNumber": 35784,
+    "lat": 37.49576599,
+    "lng": 126.5010685
+  },
+  {
+    "stationName": "운서역(남동측)",
+    "stationNumber": 35775,
+    "lat": 37.49136399,
+    "lng": 126.4973885
+  },
+  {
+    "stationName": "하늘문화센터",
+    "stationNumber": 35826,
+    "lat": 37.49643003,
+    "lng": 126.4724449
+  },
+  {
+    "stationName": "하늘문화센터",
+    "stationNumber": 35827,
+    "lat": 37.49645444,
+    "lng": 126.4724274
+  },
+  {
+    "stationName": "백련산입구",
+    "stationNumber": 35773,
+    "lat": 37.50350591,
+    "lng": 126.4997898
+  },
+  {
+    "stationName": "중산중고등학교",
+    "stationNumber": 35817,
+    "lat": 37.49863174,
+    "lng": 126.5705025
+  },
+  {
+    "stationName": "중산중고등학교",
+    "stationNumber": 35818,
+    "lat": 37.49883603,
+    "lng": 126.5703484
+  },
+  {
+    "stationName": "운서2차SKVIEW스카이시티",
+    "stationNumber": 35882,
+    "lat": 37.4796998,
+    "lng": 126.5031491
+  },
+  {
+    "stationName": "인천푸른빛유치원",
+    "stationNumber": 89377,
+    "lat": 37.53777376,
+    "lng": 126.6281239
+  },
+  {
+    "stationName": "청라3동행정복지센터",
+    "stationNumber": 89375,
+    "lat": 37.53356168,
+    "lng": 126.6276417
+  },
+  {
+    "stationName": "청라3동행정복지센터",
+    "stationNumber": 89374,
+    "lat": 37.53351672,
+    "lng": 126.6273998
+  },
+  {
+    "stationName": "호수공원음악분수",
+    "stationNumber": 89027,
+    "lat": 37.52945858,
+    "lng": 126.627136
+  },
+  {
+    "stationName": "레이크블루(청라시티프라디움)",
+    "stationNumber": 89334,
+    "lat": 37.53623219,
+    "lng": 126.627323
+  },
+  {
+    "stationName": "레이크블루(청라시티프라디움)",
+    "stationNumber": 89335,
+    "lat": 37.53595797,
+    "lng": 126.6272979
+  },
+  {
+    "stationName": "운서2차SKVIEW스카이시티",
+    "stationNumber": 35883,
+    "lat": 37.47934322,
+    "lng": 126.5030794
+  },
+  {
+    "stationName": "송도sk뷰(101동)",
+    "stationNumber": 38634,
+    "lat": 37.414963,
+    "lng": 126.625558
+  },
+  {
+    "stationName": "영종e편한세상센텀베뉴.화성파크드림2차",
+    "stationNumber": 35886,
+    "lat": 37.48701399,
+    "lng": 126.5501875
+  },
+  {
+    "stationName": "영종e편한세상센텀베뉴.화성파크드림2차",
+    "stationNumber": 35885,
+    "lat": 37.487097,
+    "lng": 126.549854
+  },
+  {
+    "stationName": "중봉로교차로",
+    "stationNumber": 89420,
+    "lat": 37.524016,
+    "lng": 126.649562
+  },
+  {
+    "stationName": "영종LH67단지",
+    "stationNumber": 35873,
+    "lat": 37.50177385,
+    "lng": 126.5672594
+  },
+  {
+    "stationName": "영종국제도시수자인",
+    "stationNumber": 35891,
+    "lat": 37.48439586,
+    "lng": 126.5551211
+  },
+  {
+    "stationName": "영종블루오션",
+    "stationNumber": 35819,
+    "lat": 37.48707976,
+    "lng": 126.5627019
+  },
+  {
+    "stationName": "푸르지오더스카이",
+    "stationNumber": 35844,
+    "lat": 37.478261,
+    "lng": 126.505531
+  },
+  {
+    "stationName": "더샵송도마리나베이",
+    "stationNumber": 38765,
+    "lat": 37.411053,
+    "lng": 126.612868
+  },
+  {
+    "stationName": "더샵송도마리나베이",
+    "stationNumber": 38766,
+    "lat": 37.409579,
+    "lng": 126.612444
+  },
+  {
+    "stationName": "랜드마크시티1호수변공원",
+    "stationNumber": 38767,
+    "lat": 37.407144,
+    "lng": 126.611533
+  },
+  {
+    "stationName": "힐스테이트레이크송도1차입구",
+    "stationNumber": 38751,
+    "lat": 37.401491,
+    "lng": 126.619652
+  },
+  {
+    "stationName": "인천포스코고등학교",
+    "stationNumber": 38758,
+    "lat": 37.400912,
+    "lng": 126.648372
+  },
+  {
+    "stationName": "인천포스코고등학교",
+    "stationNumber": 38759,
+    "lat": 37.400473,
+    "lng": 126.648538
+  },
+  {
+    "stationName": "인천대학교북문",
+    "stationNumber": 38760,
+    "lat": 37.379077,
+    "lng": 126.631986
+  },
+  {
+    "stationName": "청라국제도시역푸르지오시티",
+    "stationNumber": 89523,
+    "lat": 37.55185887,
+    "lng": 126.617864
+  },
+  {
+    "stationName": "호반써밋스카이센트럴1차아파트",
+    "stationNumber": 35893,
+    "lat": 37.49617294,
+    "lng": 126.5663628
+  },
+  {
+    "stationName": "중산고등학교",
+    "stationNumber": 35868,
+    "lat": 37.49712519,
+    "lng": 126.569242
+  },
+  {
+    "stationName": "청라디이스트",
+    "stationNumber": 89017,
+    "lat": 37.52843593,
+    "lng": 126.624436
+  },
+  {
+    "stationName": "서해그랑블",
+    "stationNumber": 42789,
+    "lat": 37.53011416,
+    "lng": 126.6550425
+  },
+  {
+    "stationName": "메이루즈커낼파크뷰",
+    "stationNumber": 42747,
+    "lat": 37.53629117,
+    "lng": 126.6539128
+  },
+  {
+    "stationName": "메이루즈커낼파크뷰",
+    "stationNumber": 42762,
+    "lat": 37.53593369,
+    "lng": 126.6538656
+  },
+  {
+    "stationName": "호반베르디움3차",
+    "stationNumber": 42743,
+    "lat": 37.53009701,
+    "lng": 126.6583572
+  },
+  {
+    "stationName": "청라고등학교",
+    "stationNumber": 42784,
+    "lat": 37.53699922,
+    "lng": 126.6600726
+  },
+  {
+    "stationName": "송도자이크리스탈오션",
+    "stationNumber": 38780,
+    "lat": 37.3885529,
+    "lng": 126.6129954
+  },
+  {
+    "stationName": "송도자이크리스탈오션",
+    "stationNumber": 38779,
+    "lat": 37.38917944,
+    "lng": 126.6130919
+  },
+  {
+    "stationName": "송도랜드마크시티13호근린공원",
+    "stationNumber": 38738,
+    "lat": 37.38726559,
+    "lng": 126.6191475
+  },
+  {
+    "stationName": "송도랜드마크시티13호근린공원",
+    "stationNumber": 38739,
+    "lat": 37.39465568,
+    "lng": 126.6200828
+  },
+  {
+    "stationName": "인천스타트업파크",
+    "stationNumber": 38390,
+    "lat": 37.3871133,
+    "lng": 126.641113
+  },
+  {
+    "stationName": "지식정보단지역",
+    "stationNumber": 38403,
+    "lat": 37.37863548,
+    "lng": 126.6452684
+  },
+  {
+    "stationName": "송도지웰푸르지오시티",
+    "stationNumber": 38424,
+    "lat": 37.38371246,
+    "lng": 126.6434552
+  },
+  {
+    "stationName": "송도더샵마스터뷰23단지",
+    "stationNumber": 38441,
+    "lat": 37.38115618,
+    "lng": 126.6346699
+  },
+  {
+    "stationName": "송도힐스테이트",
+    "stationNumber": 38479,
+    "lat": 37.39696571,
+    "lng": 126.6500145
+  },
+  {
+    "stationName": "대성베르힐",
+    "stationNumber": 35913,
+    "lat": 37.48072951,
+    "lng": 126.5272935
+  }
+]

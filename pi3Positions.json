@@ -1,0 +1,176 @@
+[
+  {
+    "stationName": "해양경찰청",
+    "stationNumber": 38411,
+    "lat": 37.39488903,
+    "lng": 126.6495309
+  },
+  {
+    "stationName": "미추홀공원",
+    "stationNumber": 38368,
+    "lat": 37.38489684,
+    "lng": 126.6451125
+  },
+  {
+    "stationName": "컨벤시아",
+    "stationNumber": 38372,
+    "lat": 37.38961272,
+    "lng": 126.6473712
+  },
+  {
+    "stationName": "인천대정문",
+    "stationNumber": 38386,
+    "lat": 37.37764198,
+    "lng": 126.635164
+  },
+  {
+    "stationName": "청라호수공원한신더휴",
+    "stationNumber": 42870,
+    "lat": 37.52904473,
+    "lng": 126.6281589
+  },
+  {
+    "stationName": "경제자유구역청",
+    "stationNumber": 38515,
+    "lat": 37.39663021,
+    "lng": 126.6336869
+  },
+  {
+    "stationName": "더샵하버뷰",
+    "stationNumber": 38453,
+    "lat": 37.397501,
+    "lng": 126.646866
+  },
+  {
+    "stationName": "더샵하버뷰14단지",
+    "stationNumber": 38504,
+    "lat": 37.396418,
+    "lng": 126.645956
+  },
+  {
+    "stationName": "송도2동주민센터",
+    "stationNumber": 38588,
+    "lat": 37.40376,
+    "lng": 126.64099
+  },
+  {
+    "stationName": "반도유보라",
+    "stationNumber": 42963,
+    "lat": 37.52653,
+    "lng": 126.624781
+  },
+  {
+    "stationName": "심곡천봉수교",
+    "stationNumber": 42875,
+    "lat": 37.52975,
+    "lng": 126.661748
+  },
+  {
+    "stationName": "호반베르디움2차",
+    "stationNumber": 89112,
+    "lat": 37.5366,
+    "lng": 126.656353
+  },
+  {
+    "stationName": "청람중학교",
+    "stationNumber": 89018,
+    "lat": 37.539105,
+    "lng": 126.644353
+  },
+  {
+    "stationName": "청람중학교",
+    "stationNumber": 89019,
+    "lat": 37.538993,
+    "lng": 126.644321
+  },
+  {
+    "stationName": "청라한화꿈에그린",
+    "stationNumber": 89123,
+    "lat": 37.537798,
+    "lng": 126.636607
+  },
+  {
+    "stationName": "청라골프아카데미",
+    "stationNumber": 89256,
+    "lat": 37.550542,
+    "lng": 126.632065
+  },
+  {
+    "stationName": "영종주공7단지",
+    "stationNumber": 35111,
+    "lat": 37.49588524,
+    "lng": 126.4852009
+  },
+  {
+    "stationName": "풍림6단지",
+    "stationNumber": 35124,
+    "lat": 37.50045221,
+    "lng": 126.488488
+  },
+  {
+    "stationName": "청라달튼국제학교",
+    "stationNumber": 89121,
+    "lat": 37.546975,
+    "lng": 126.62173
+  },
+  {
+    "stationName": "청라국제어린이집",
+    "stationNumber": 89289,
+    "lat": 37.53416,
+    "lng": 126.658751
+  },
+  {
+    "stationName": "자이더테라스1단지",
+    "stationNumber": 89298,
+    "lat": 37.522187,
+    "lng": 126.624543
+  },
+  {
+    "stationName": "e편한세상1차(정문)",
+    "stationNumber": 35663,
+    "lat": 37.47801396,
+    "lng": 126.5124153
+  },
+  {
+    "stationName": "힐스테이트송도더테라스(후문)",
+    "stationNumber": 38713,
+    "lat": 37.41034749,
+    "lng": 126.6248216
+  },
+  {
+    "stationName": "달빛축제공원",
+    "stationNumber": 38621,
+    "lat": 37.40302036,
+    "lng": 126.6314028
+  },
+  {
+    "stationName": "복합환승센터",
+    "stationNumber": 89044,
+    "lat": 37.52994384,
+    "lng": 126.624378
+  },
+  {
+    "stationName": "모아미래도",
+    "stationNumber": 89344,
+    "lat": 37.53858688,
+    "lng": 126.6190435
+  },
+  {
+    "stationName": "e편한세상영종오션하임",
+    "stationNumber": 35761,
+    "lat": 37.49057544,
+    "lng": 126.5680769
+  },
+  {
+    "stationName": "스타필드",
+    "stationNumber": 89417,
+    "lat": 37.55083544,
+    "lng": 126.6160668
+  },
+  {
+    "stationName": "스타필드",
+    "stationNumber": 89418,
+    "lat": 37.55089104,
+    "lng": 126.6165418
+  }
+]

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>교통 환경보드 위치</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 커스텀 오버레이 스타일 */
+    .custom-overlay {
+      position: relative;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 12px 12px 10px 12px;
+      text-align: center;
+      min-width: 150px;
+      transform: translateX(-50%);
+      /* margin-bottom: 10px; */
+      /* 오버레이를 위로 밀어내므로 제거 */
+      white-space: nowrap;
+    }
+
+    .custom-overlay .title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .custom-overlay .number {
+      font-size: 12px;
+      color: #666;
+      display: block;
+    }
+
+    .custom-overlay .close-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 17px;
+      /* close.png 크기에 맞춰 조절 */
+      height: 17px;
+      /* close.png 크기에 맞춰 조절 */
+      background: url('close.png');
+      /* 로컬 파일 사용 */
+      background-repeat: no-repeat;
+      background-size: contain;
+      /* 이미지 비율 유지하며 맞춤 */
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    /* 꼬리 스타일 */
+    .custom-overlay::after,
+    .custom-overlay::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 0;
+      height: 0;
+    }
+
+    .custom-overlay::after {
+      /* 꼬리 내용 */
+      bottom: -10px;
+      margin-left: -10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid white;
+    }
+
+    .custom-overlay::before {
+      /* 꼬리 테두리 */
+      bottom: -11px;
+      margin-left: -11px;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-top: 11px solid #ccc;
+      z-index: -1;
+    }
+
+    #marker-toggles {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 10;
+      font-size: 13px;
+    }
+
+    #marker-toggles label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer
+    }
+
+    #marker-toggles input[type="checkbox"] {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="marker-toggles">
+    <label>
+      <input type="checkbox" id="toggle-pi3" value="pi3" checked> 라즈베리파이3
+    </label>
+    <label>
+      <input type="checkbox" id="toggle-pi4" value="pi4" checked> 라즈베리파이4
+    </label>
+    <label>
+      <input type="checkbox" id="toggle-cctv" value="cctv" checked> 방범 함체
+    </label>
+  </div>
+  <div id="map"></div>
+
+  <!-- 1. Kakao Maps API 로드 -->
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0a93a6fd8aedb65629749b46ce01ea94&libraries=services"></script>
+
+  <!-- 2. 지도 생성 및 마커 표시 스크립트 -->
+  <script>
+    let currentOverlay = null;
+
+    function closeOverlay() {
+      if (currentOverlay) {
+        currentOverlay.setMap(null);
+        currentOverlay = null;
+      }
+    }
+
+    kakao.maps.load(async function () {
+      console.log("Kakao Maps API 로드 완료");
+
+      async function fetchData(url) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} while fetching ${url}`);
+          }
+          return await response.json();
+        } catch (error) {
+          console.error("데이터 로딩 실패:", error);
+          return null;
+        }
+      }
+
+      console.log("JSON 데이터 로딩 시작...");
+      const [pi3PositionsData, pi4PositionsData, cctvPositionData] = await Promise.all([
+        fetchData('pi3Positions.json'),
+        fetchData('pi4Positions.json'),
+        fetchData('cctvPositions.json')
+      ]);
+
+      if (!pi3PositionsData || !pi4PositionsData) {
+        alert("마커 데이터를 로드하는 데 실패했습니다. 콘솔을 확인하세요.");
+        return;
+      }
+      console.log("JSON 데이터 로딩 완료:", { pi3Count: pi3PositionsData.length, pi4Count: pi4PositionsData.length });
+
+      const container = document.getElementById('map');
+      const options = {
+        center: new kakao.maps.LatLng(37.45, 126.65),
+        level: 9
+      };
+      const map = new kakao.maps.Map(container, options);
+      console.log("지도 생성 완료");
+
+      const imagePi3Src = 'pi3.png';
+      const imagePi4Src = 'pi4.png';
+      const imageCctvSrc = 'cctv.png';
+      const imageSize = new kakao.maps.Size(32, 32);
+      const imageOption = { offset: new kakao.maps.Point(16, 32) };
+      const imagePi3 = new kakao.maps.MarkerImage(imagePi3Src, imageSize, imageOption);
+      const imagePi4 = new kakao.maps.MarkerImage(imagePi4Src, imageSize, imageOption);
+      const imageCctv = new kakao.maps.MarkerImage(imageCctvSrc, imageSize, imageOption);
+
+      // Pi 오버레이 표시 함수
+      function showPiOverlay(map, marker, stationData) {
+        closeOverlay(); // 이전 오버레이 닫기
+
+        const content = `
+          <div class="custom-overlay">
+            <button class="close-button" onclick="closeOverlay()" title="닫기"></button>
+            <span class="number">${stationData.stationNumber}</span>
+            <span class="title">${stationData.stationName}</span>
+          </div>`;
+
+        // Pi 오버레이 생성 및 yAnchor 조정
+        const overlay = new kakao.maps.CustomOverlay({
+          content: content,
+          map: map,
+          position: marker.getPosition(),
+          yAnchor: 1.6,
+          xAnchor: 0
+        });
+
+        currentOverlay = overlay; // 현재 오버레이 참조 저장
+      }
+
+      // CCTV 오버레이 표시 함수
+      function showCctvOverlay(map, marker, cctvData) {
+        closeOverlay(); // 이전 오버레이
+
+        const content = `
+          <div class="custom-overlay">
+            <button class="close-button" onclick="closeOverlay()" title="닫기"></button>
+            <span class="title">${cctvData.cctvName}</span>
+          </div>`;
+
+        // CCTV 오버레이 생성 및 yAnchor 조정
+        const overlay = new kakao.maps.CustomOverlay({
+          content: content,
+          map: map,
+          position: marker.getPosition(),
+          yAnchor: 1.6,
+          xAnchor: 0
+        });
+
+        currentOverlay = overlay; // 현재 오버레이 참조 저장
+      }
+
+      // pi 마커 생성 함수
+      function createPiMarkers(positionsData, markerImage) {
+        if (!positionsData || positionsData.length === 0) return;
+        const markers = [];
+
+        for (let i = 0; i < positionsData.length; i++) {
+          const currentPositionData = positionsData[i];
+          const latlng = new kakao.maps.LatLng(currentPositionData.lat, currentPositionData.lng);
+
+          const marker = new kakao.maps.Marker({
+            map: map,
+            position: latlng,
+            title: `${currentPositionData.stationName} (${currentPositionData.stationNumber})`,
+            image: markerImage
+          });
+
+          // 마커 클릭 시 커스텀 오버레이 표시
+          kakao.maps.event.addListener(marker, 'click', function () {
+            showPiOverlay(map, marker, currentPositionData);
+          });
+
+          markers.push(marker);
+        }
+
+        return markers;
+      }
+
+      // cctv 마커 생성 함수
+      function createCctvMarkers(positionsData, markerImage) {
+        if (!positionsData || positionsData.length === 0) return;
+        const markers = [];
+
+        for (let i = 0; i < positionsData.length; i++) {
+          const currentPositionData = positionsData[i];
+          const latlng = new kakao.maps.LatLng(currentPositionData.lat, currentPositionData.lng);
+
+          const marker = new kakao.maps.Marker({
+            map: map,
+            position: latlng,
+            title: `${currentPositionData.cctvName}`,
+            image: markerImage
+          });
+
+          kakao.maps.event.addListener(marker, 'click', function () {
+            showCctvOverlay(map, marker, currentPositionData);
+          });
+
+          markers.push(marker);
+        }
+
+        return markers;
+      }
+
+      // 각 데이터로 마커 생성 실행
+      const pi3Markers = createPiMarkers(pi3PositionsData, imagePi3);
+      const pi4Markers = createPiMarkers(pi4PositionsData, imagePi4);
+      const cctvMarkers = createCctvMarkers(cctvPositionData, imageCctv);
+
+      const togglePi3 = document.getElementById('toggle-pi3');
+      const togglePi4 = document.getElementById('toggle-pi4');
+      const toggleCctv = document.getElementById('toggle-cctv');
+
+      function setMarkersVisibility(markers, visible) {
+        const targetMap = visible ? map : null;
+        for (let i = 0; i < markers.length; i++) {
+          markers[i].setMap(targetMap);
+        }
+      }
+
+      togglePi3.addEventListener('change', function () {
+        setMarkersVisibility(pi3Markers, this.checked);
+
+        if (!this.chekced && currentOverlay && pi3Markers.some(m => m.getPosition().equals(currentOverlay.getPosition()))) {
+          closeOverlay();
+        }
+      });
+
+      togglePi4.addEventListener('change', function () {
+        setMarkersVisibility(pi4Markers, this.checked);
+
+        if (!this.checked && currentOverlay && pi4Markers.some(m => m.getPosition().equals(currentOverlay.getPosition()))) {
+          closeOverlay();
+        }
+      });
+
+      toggleCctv.addEventListener('change', function () {
+        setMarkersVisibility(cctvMarkers, this.checked);
+
+        if (!this.checked && currentOverlay && cctvMarkers.some(m => m.getPosition().equals(currentOverlay.getPosition()))) {
+          closeOverlay();
+        }
+      });
+
+      // 지도 클릭 시 오버레이 닫기
+      kakao.maps.event.addListener(map, 'click', closeOverlay);
+    });
+  </script>
+</body>
+
+</html>
