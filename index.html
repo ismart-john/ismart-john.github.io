@@ -104,18 +104,74 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       z-index: 10;
-      font-size: 13px;
+      font-size: 16px;
+      /* 글자 크기 13px에서 16px로 확대 */
     }
 
     #marker-toggles label {
       display: block;
       margin-bottom: 5px;
-      cursor: pointer
+      cursor: pointer;
+      font-size: 16px;
+      /* 글자 크기 확대 */
     }
 
     #marker-toggles input[type="checkbox"] {
       vertical-align: middle;
       margin-right: 5px;
+    }
+
+    /* 검색 기능 스타일 */
+    #search-container {
+      position: absolute;
+      display: flex;
+      top: 15px;
+      left: 50%;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 10;
+      width: 250px;
+    }
+
+    #search-input {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-right: 5px;
+    }
+
+    #search-button {
+      padding: 8px 12px;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #search-results {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .result-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      background-color: white;
+    }
+
+    .result-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .no-results {
+      padding: 8px;
+      color: #666;
     }
   </style>
 </head>
@@ -132,6 +188,14 @@
       <input type="checkbox" id="toggle-cctv" value="cctv" checked> 방범 함체
     </label>
   </div>
+
+  <!-- 검색 기능 추가 -->
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="번호 또는 이름으로 검색">
+    <button id="search-button">검색</button>
+    <div id="search-results"></div>
+  </div>
+
   <div id="map"></div>
 
   <!-- 1. Kakao Maps API 로드 -->
@@ -242,7 +306,7 @@
 
       // pi 마커 생성 함수
       function createPiMarkers(positionsData, markerImage) {
-        if (!positionsData || positionsData.length === 0) return;
+        if (!positionsData || positionsData.length === 0) return [];
         const markers = [];
 
         for (let i = 0; i < positionsData.length; i++) {
@@ -269,7 +333,7 @@
 
       // cctv 마커 생성 함수
       function createCctvMarkers(positionsData, markerImage) {
-        if (!positionsData || positionsData.length === 0) return;
+        if (!positionsData || positionsData.length === 0) return [];
         const markers = [];
 
         for (let i = 0; i < positionsData.length; i++) {
@@ -312,7 +376,7 @@
       togglePi3.addEventListener('change', function () {
         setMarkersVisibility(pi3Markers, this.checked);
 
-        if (!this.chekced && currentOverlay && pi3Markers.some(m => m.getPosition().equals(currentOverlay.getPosition()))) {
+        if (!this.checked && currentOverlay && pi3Markers.some(m => m.getPosition().equals(currentOverlay.getPosition()))) {
           closeOverlay();
         }
       });
@@ -335,6 +399,124 @@
 
       // 지도 클릭 시 오버레이 닫기
       kakao.maps.event.addListener(map, 'click', closeOverlay);
+
+      // 검색 기능 구현
+      function setupSearch() {
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+
+        // 검색 실행 함수
+        function performSearch() {
+          const searchTerm = searchInput.value.toLowerCase().trim();
+          if (searchTerm === '') return;
+
+          searchResults.innerHTML = '';
+          let foundResults = [];
+
+          // Pi3 데이터 검색
+          if (pi3PositionsData) {
+            pi3PositionsData.forEach(station => {
+              if (station.stationNumber.toLowerCase().includes(searchTerm) ||
+                station.stationName.toLowerCase().includes(searchTerm)) {
+                foundResults.push({
+                  name: station.stationName,
+                  number: station.stationNumber,
+                  position: new kakao.maps.LatLng(station.lat, station.lng),
+                  type: 'pi3',
+                  data: station
+                });
+              }
+            });
+          }
+
+          // Pi4 데이터 검색
+          if (pi4PositionsData) {
+            pi4PositionsData.forEach(station => {
+              if (station.stationNumber.toLowerCase().includes(searchTerm) ||
+                station.stationName.toLowerCase().includes(searchTerm)) {
+                foundResults.push({
+                  name: station.stationName,
+                  number: station.stationNumber,
+                  position: new kakao.maps.LatLng(station.lat, station.lng),
+                  type: 'pi4',
+                  data: station
+                });
+              }
+            });
+          }
+
+          // CCTV 데이터 검색
+          if (cctvPositionData && cctvPositionData.length > 0) {
+            cctvPositionData.forEach(cctv => {
+              if (cctv.cctvName.toLowerCase().includes(searchTerm)) {
+                foundResults.push({
+                  name: cctv.cctvName,
+                  number: '',
+                  position: new kakao.maps.LatLng(cctv.lat, cctv.lng),
+                  type: 'cctv',
+                  data: cctv
+                });
+              }
+            });
+          }
+
+          // 검색 결과 표시
+          if (foundResults.length === 0) {
+            searchResults.innerHTML = '<div class="no-results">검색 결과가 없습니다.</div>';
+          } else {
+            foundResults.forEach(result => {
+              const resultItem = document.createElement('div');
+              resultItem.className = 'result-item';
+              resultItem.innerHTML = `${result.name}${result.number ? ' (' + result.number + ')' : ''}`;
+
+              resultItem.addEventListener('click', function () {
+                // 해당 위치로 지도 이동
+                map.setCenter(result.position);
+                map.setLevel(3);  // 줌 레벨 설정
+
+                // 마커 오버레이 표시
+                if (result.type === 'pi3' || result.type === 'pi4') {
+                  // Pi 마커 찾기
+                  const markers = result.type === 'pi3' ? pi3Markers : pi4Markers;
+                  for (let i = 0; i < markers.length; i++) {
+                    if (markers[i].getPosition().equals(result.position)) {
+                      showPiOverlay(map, markers[i], result.data);
+                      break;
+                    }
+                  }
+                } else if (result.type === 'cctv') {
+                  // CCTV 마커 찾기
+                  for (let i = 0; i < cctvMarkers.length; i++) {
+                    if (cctvMarkers[i].getPosition().equals(result.position)) {
+                      showCctvOverlay(map, cctvMarkers[i], result.data);
+                      break;
+                    }
+                  }
+                }
+
+                // 검색 결과 창 닫기
+                searchResults.innerHTML = '';
+              });
+
+              searchResults.appendChild(resultItem);
+            });
+          }
+        }
+
+        // 버튼 클릭 이벤트
+        searchButton.addEventListener('click', performSearch);
+
+        // 엔터 키 이벤트
+        searchInput.addEventListener('keypress', function (e) {
+          if (e.key === 'Enter') {
+            performSearch();
+          }
+        });
+      }
+
+      // 검색 기능 초기화
+      setupSearch();
     });
   </script>
 </body>
