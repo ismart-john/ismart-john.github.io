@@ -228,6 +228,12 @@
     "lng": 126.6616991
   },
   {
+    "stationName": "송도센트럴파크역",
+    "stationNumber": 38563,
+    "lat": 37.39432091,
+    "lng": 126.6343794
+  },
+  {
     "stationName": "인천대학교 공과대학",
     "stationNumber": 38499,
     "lat": 37.37160618,
@@ -766,6 +772,12 @@
     "stationNumber": 35868,
     "lat": 37.49712519,
     "lng": 126.569242
+  },
+  {
+    "stationName": "중산고등학교",
+    "stationNumber": 35869,
+    "lat": 37.4974218,
+    "lng": 126.5693359
   },
   {
     "stationName": "청라디이스트",
