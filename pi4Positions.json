@@ -120,46 +120,10 @@
     "lng": 126.6446872
   },
   {
-    "stationName": "청라호수공원(남측)",
-    "stationNumber": 42861,
-    "lat": 37.52558472,
-    "lng": 126.6390783
-  },
-  {
-    "stationName": "반도유보라",
-    "stationNumber": 42905,
-    "lat": 37.524625,
-    "lng": 126.6273589
-  },
-  {
-    "stationName": "자이더테라스2단지",
-    "stationNumber": 42871,
-    "lat": 37.524005,
-    "lng": 126.6249589
-  },
-  {
-    "stationName": "청라국제업무단지(골드클래스)",
-    "stationNumber": 42984,
-    "lat": 37.5292292,
-    "lng": 126.6250299
-  },
-  {
-    "stationName": "송도풍림아이원1단지",
-    "stationNumber": 38033,
-    "lat": 37.39461656,
-    "lng": 126.6536726
-  },
-  {
     "stationName": "신송고등학교",
     "stationNumber": 38023,
     "lat": 37.3911018,
     "lng": 126.658823
-  },
-  {
-    "stationName": "이안송도",
-    "stationNumber": 38409,
-    "lat": 37.39676052,
-    "lng": 126.6515302
   },
   {
     "stationName": "웰카운티",
@@ -174,22 +138,10 @@
     "lng": 126.6251874
   },
   {
-    "stationName": "신송고등학교",
-    "stationNumber": 38024,
-    "lat": 37.39125683,
-    "lng": 126.6589897
-  },
-  {
     "stationName": "글로벌캠퍼스푸르지오",
     "stationNumber": 39840,
     "lat": 37.37571412,
     "lng": 126.6551739
-  },
-  {
-    "stationName": "테크노파크역입구",
-    "stationNumber": 38422,
-    "lat": 37.38174863,
-    "lng": 126.6567896
   },
   {
     "stationName": "인천대입구역",
@@ -270,28 +222,10 @@
     "lng": 126.6806388
   },
   {
-    "stationName": "서부산업단지",
-    "stationNumber": 89035,
-    "lat": 37.55429925,
-    "lng": 126.6345812
-  },
-  {
-    "stationName": "인천체육고등학교",
-    "stationNumber": 89049,
-    "lat": 37.54787126,
-    "lng": 126.6118231
-  },
-  {
     "stationName": "인천체육고등학교 입구",
     "stationNumber": 89048,
     "lat": 37.54771815,
     "lng": 126.6117158
-  },
-  {
-    "stationName": "청라백세요양병원",
-    "stationNumber": 89179,
-    "lat": 37.52866156,
-    "lng": 126.6123917
   },
   {
     "stationName": "청라센텀로제비앙",
@@ -300,40 +234,10 @@
     "lng": 126.621522
   },
   {
-    "stationName": "로봇타워",
-    "stationNumber": 89301,
-    "lat": 37.52070227,
-    "lng": 126.6121663
-  },
-  {
-    "stationName": "청라도",
-    "stationNumber": 89127,
-    "lat": 37.5343501,
-    "lng": 126.6137112
-  },
-  {
-    "stationName": "청라도",
-    "stationNumber": 42931,
-    "lat": 37.53398426,
-    "lng": 126.6143979
-  },
-  {
     "stationName": "청라센텀로제비앙",
     "stationNumber": 89295,
     "lat": 37.53730013,
     "lng": 126.6218651
-  },
-  {
-    "stationName": "뒤골입구",
-    "stationNumber": 35668,
-    "lat": 37.52528444,
-    "lng": 126.5137051
-  },
-  {
-    "stationName": "영종동 행정복지센터",
-    "stationNumber": 35672,
-    "lat": 37.49401221,
-    "lng": 126.5307535
   },
   {
     "stationName": "예단포",
@@ -346,42 +250,6 @@
     "stationNumber": 35707,
     "lat": 37.49178796,
     "lng": 126.5296644
-  },
-  {
-    "stationName": "운남초교사거리",
-    "stationNumber": 35706,
-    "lat": 37.49184622,
-    "lng": 126.5299038
-  },
-  {
-    "stationName": "뒤골입구",
-    "stationNumber": 35669,
-    "lat": 37.52515674,
-    "lng": 126.513787
-  },
-  {
-    "stationName": "박촌마을입구",
-    "stationNumber": 35671,
-    "lat": 37.52361662,
-    "lng": 126.5105898
-  },
-  {
-    "stationName": "박촌마을입구",
-    "stationNumber": 35670,
-    "lat": 37.52356131,
-    "lng": 126.5104047
-  },
-  {
-    "stationName": "영종동 행정복지센터",
-    "stationNumber": 35673,
-    "lat": 37.4940281,
-    "lng": 126.5310028
-  },
-  {
-    "stationName": "예단포",
-    "stationNumber": 35395,
-    "lat": 37.52723147,
-    "lng": 126.5038017
   },
   {
     "stationName": "웰카운티2단지",
@@ -520,12 +388,6 @@
     "stationNumber": 38535,
     "lat": 37.4893196,
     "lng": 126.530647
-  },
-  {
-    "stationName": "영종자이아파트",
-    "stationNumber": 38536,
-    "lat": 37.48915815,
-    "lng": 126.5311561
   },
   {
     "stationName": "하늘도시중심상가",
@@ -678,12 +540,6 @@
     "lng": 126.649562
   },
   {
-    "stationName": "영종LH67단지",
-    "stationNumber": 35873,
-    "lat": 37.50177385,
-    "lng": 126.5672594
-  },
-  {
     "stationName": "영종국제도시수자인",
     "stationNumber": 35891,
     "lat": 37.48439586,
@@ -702,28 +558,10 @@
     "lng": 126.505531
   },
   {
-    "stationName": "더샵송도마리나베이",
-    "stationNumber": 38765,
-    "lat": 37.411053,
-    "lng": 126.612868
-  },
-  {
-    "stationName": "더샵송도마리나베이",
-    "stationNumber": 38766,
-    "lat": 37.409579,
-    "lng": 126.612444
-  },
-  {
     "stationName": "인천대학교북문",
     "stationNumber": 38760,
     "lat": 37.379077,
     "lng": 126.631986
-  },
-  {
-    "stationName": "청라국제도시역푸르지오시티",
-    "stationNumber": 89523,
-    "lat": 37.55185887,
-    "lng": 126.617864
   },
   {
     "stationName": "호반써밋스카이센트럴1차아파트",
@@ -742,12 +580,6 @@
     "stationNumber": 35869,
     "lat": 37.4974218,
     "lng": 126.5693359
-  },
-  {
-    "stationName": "청라디이스트",
-    "stationNumber": 89017,
-    "lat": 37.52843593,
-    "lng": 126.624436
   },
   {
     "stationName": "서해그랑블",

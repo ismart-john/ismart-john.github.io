@@ -19,15 +19,9 @@
   },
   {
     "stationName": "인천대정문",
-    "stationNumber": 38386,
+    "stationNumber": 38,
     "lat": 37.37764198,
     "lng": 126.635164
-  },
-  {
-    "stationName": "청라호수공원한신더휴",
-    "stationNumber": 42870,
-    "lat": 37.52904473,
-    "lng": 126.6281589
   },
   {
     "stationName": "경제자유구역청",
@@ -142,17 +136,5 @@
     "stationNumber": 35761,
     "lat": 37.49057544,
     "lng": 126.5680769
-  },
-  {
-    "stationName": "스타필드",
-    "stationNumber": 89417,
-    "lat": 37.55083544,
-    "lng": 126.6160668
-  },
-  {
-    "stationName": "스타필드",
-    "stationNumber": 89418,
-    "lat": 37.55089104,
-    "lng": 126.6165418
   }
 ]
