@@ -6,12 +6,6 @@
     "lng": 126.6408211
   },
   {
-    "stationName": "청라호반베르디움.포리공원",
-    "stationNumber": 42919,
-    "lat": 37.52722194,
-    "lng": 126.6406061
-  },
-  {
     "stationName": "제일풍경채",
     "stationNumber": 42833,
     "lat": 37.53918389,
@@ -42,12 +36,6 @@
     "lng": 126.645481
   },
   {
-    "stationName": "린스트라우스",
-    "stationNumber": 42948,
-    "lat": 37.52968161,
-    "lng": 126.6415491
-  },
-  {
     "stationName": "웰카운티1차",
     "stationNumber": 42746,
     "lat": 37.53867962,
@@ -60,18 +48,6 @@
     "lng": 126.6587639
   },
   {
-    "stationName": "청라국제도서관",
-    "stationNumber": 42923,
-    "lat": 37.53122229,
-    "lng": 126.6600238
-  },
-  {
-    "stationName": "청라국제도서관",
-    "stationNumber": 42922,
-    "lat": 37.53121874,
-    "lng": 126.6596516
-  },
-  {
     "stationName": "호반베르디움",
     "stationNumber": 42855,
     "lat": 37.53628139,
@@ -82,36 +58,6 @@
     "stationNumber": 42772,
     "lat": 37.53491249,
     "lng": 126.6565902
-  },
-  {
-    "stationName": "서해그랑블",
-    "stationNumber": 42790,
-    "lat": 37.52973277,
-    "lng": 126.6551081
-  },
-  {
-    "stationName": "호반베르디움14단지",
-    "stationNumber": 42880,
-    "lat": 37.5362412,
-    "lng": 126.6517821
-  },
-  {
-    "stationName": "청라1동행정복지센터",
-    "stationNumber": 42745,
-    "lat": 37.53209127,
-    "lng": 126.6533926
-  },
-  {
-    "stationName": "청라1동행정복지센터",
-    "stationNumber": 42744,
-    "lat": 37.532071,
-    "lng": 126.65312
-  },
-  {
-    "stationName": "힐데스하임",
-    "stationNumber": 42876,
-    "lat": 37.52976194,
-    "lng": 126.6522723
   },
   {
     "stationName": "제일풍경채2차321동앞",
@@ -226,12 +172,6 @@
     "stationNumber": 89048,
     "lat": 37.54771815,
     "lng": 126.6117158
-  },
-  {
-    "stationName": "청라센텀로제비앙",
-    "stationNumber": 89296,
-    "lat": 37.5372589,
-    "lng": 126.621522
   },
   {
     "stationName": "청라센텀로제비앙",
@@ -360,12 +300,6 @@
     "lng": 126.65792
   },
   {
-    "stationName": "인천대학교송도캠퍼스",
-    "stationNumber": 38749,
-    "lat": 37.37381,
-    "lng": 126.631178
-  },
-  {
     "stationName": "LH49단지행복주택아파트",
     "stationNumber": 35768,
     "lat": 37.49355707,
@@ -474,42 +408,6 @@
     "lng": 126.5031491
   },
   {
-    "stationName": "인천푸른빛유치원",
-    "stationNumber": 89377,
-    "lat": 37.53777376,
-    "lng": 126.6281239
-  },
-  {
-    "stationName": "청라3동행정복지센터",
-    "stationNumber": 89375,
-    "lat": 37.53356168,
-    "lng": 126.6276417
-  },
-  {
-    "stationName": "청라3동행정복지센터",
-    "stationNumber": 89374,
-    "lat": 37.53351672,
-    "lng": 126.6273998
-  },
-  {
-    "stationName": "호수공원음악분수",
-    "stationNumber": 89027,
-    "lat": 37.52945858,
-    "lng": 126.627136
-  },
-  {
-    "stationName": "레이크블루(청라시티프라디움)",
-    "stationNumber": 89334,
-    "lat": 37.53623219,
-    "lng": 126.627323
-  },
-  {
-    "stationName": "레이크블루(청라시티프라디움)",
-    "stationNumber": 89335,
-    "lat": 37.53595797,
-    "lng": 126.6272979
-  },
-  {
     "stationName": "운서2차SKVIEW스카이시티",
     "stationNumber": 35883,
     "lat": 37.47934322,
@@ -582,28 +480,10 @@
     "lng": 126.5693359
   },
   {
-    "stationName": "서해그랑블",
-    "stationNumber": 42789,
-    "lat": 37.53011416,
-    "lng": 126.6550425
-  },
-  {
     "stationName": "메이루즈커낼파크뷰",
     "stationNumber": 42747,
     "lat": 37.53629117,
     "lng": 126.6539128
-  },
-  {
-    "stationName": "메이루즈커낼파크뷰",
-    "stationNumber": 42762,
-    "lat": 37.53593369,
-    "lng": 126.6538656
-  },
-  {
-    "stationName": "호반베르디움3차",
-    "stationNumber": 42743,
-    "lat": 37.53009701,
-    "lng": 126.6583572
   },
   {
     "stationName": "청라고등학교",

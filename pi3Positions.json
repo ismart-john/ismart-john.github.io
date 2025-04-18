@@ -19,7 +19,7 @@
   },
   {
     "stationName": "인천대정문",
-    "stationNumber": 38,
+    "stationNumber": 38386,
     "lat": 37.37764198,
     "lng": 126.635164
   },
@@ -124,12 +124,6 @@
     "stationNumber": 89044,
     "lat": 37.52994384,
     "lng": 126.624378
-  },
-  {
-    "stationName": "모아미래도",
-    "stationNumber": 89344,
-    "lat": 37.53858688,
-    "lng": 126.6190435
   },
   {
     "stationName": "e편한세상영종오션하임",
